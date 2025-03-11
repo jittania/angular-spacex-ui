@@ -1,0 +1,94 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr 1fr 3fr;
+  gap: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+  
+.grid-header {
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 2px solid #ccc;
+  padding: 0.5rem;
+  background-color: #f7f7f7;
+}
+
+.grid-row {
+  display: contents;
+}
+
+.grid-row div {
+  padding: 0.5rem;
+  border-bottom: 1px solid #eaeaea;
+  transition: background-color 0.2s;
+}
+
+.grid-row:not(.selected-row):hover div {
+  background-color: #f1f1f1;
+}
+
+.selected-row div {
+  background-color: #dcefff;
+}
+
+.grid-links {
+  grid-column: 1 / -1;
+  padding: 0.5rem 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #eaeaea;
+  border-top: none;
+}
+
+.grid-links a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.grid-links a:hover {
+  text-decoration: underline;
+}
+
+.grid-links a:visited {
+  color: #551A8B;
+}
+
+.pagination-container {
+  margin-top: 1rem;
+}
+
+.pagination-controls {
+  margin-top: 1rem;
+}
+
+.sorting-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.sorting-controls span {
+  font-weight: bold;
+  color: #333;
+}
+
+.sort-button {
+  background-color: #e0e0e0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.sort-button:hover {
+  background-color: #d6d6d6;
+  color: #000;
+}
+
+.sort-button:focus {
+  outline: 1px solid #007bff;
+}

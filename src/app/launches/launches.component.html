@@ -1,0 +1,65 @@
+<h2>SpaceX Launches</h2>
+<div class="sorting-controls">
+  <span>Sort by Launch Date:</span>
+  <button class="sort-button" (click)="sortAscending()">Oldest First</button>
+  <button class="sort-button" (click)="sortDescending()">Newest First</button>
+</div>
+<div class="grid-container">
+  <div class="grid-header">Flight #</div>
+  <div class="grid-header">Launch Year</div>
+  <div class="grid-header">Rocket Name</div>
+  <div class="grid-header">Details</div>
+  <div *ngFor="let launch of launches" [class.selected-row]="selectedLaunchId === launch.id" class="grid-row">
+    <div
+      tabindex="0"
+      role="button"
+      (click)="toggleRow(launch.id)"
+      (keydown.enter)="toggleRow(launch.id)"
+      (keydown.space)="toggleRow(launch.id)"
+    >
+      {{ launch.flight_number }}
+    </div>
+    <div
+      tabindex="0"
+      role="button"
+      (click)="toggleRow(launch.id)"
+      (keydown.enter)="toggleRow(launch.id)"
+      (keydown.space)="toggleRow(launch.id)"
+    >
+      {{ launch.date_utc | date: 'yyyy' }}
+    </div>
+    <div
+      tabindex="0"
+      role="button"
+      (click)="toggleRow(launch.id)"
+      (keydown.enter)="toggleRow(launch.id)"
+      (keydown.space)="toggleRow(launch.id)"
+    >
+      {{ launch.rocket.name }}
+    </div>
+    <div
+      tabindex="0"
+      role="button"
+      (click)="toggleRow(launch.id)"
+      (keydown.enter)="toggleRow(launch.id)"
+      (keydown.space)="toggleRow(launch.id)"
+    >
+      {{ launch.details }}
+    </div>
+    <div *ngIf="selectedLaunchId === launch.id" class="grid-links">
+      <ul>
+        <li *ngFor="let link of getPopulatedLinksOnly(launch.links)">
+          <a [href]="link.path" target="_blank">{{ link.label }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="pagination-container">
+  <span>{{ startIndex }}–{{ endIndex }} of {{ pagination.totalDocs }}</span>
+  <div class="pagination-controls">
+    <button [disabled]="!pagination.hasPrevPage" (click)="goToPreviousPage()">❮</button>
+    <span> Page {{ pagination.page }} of {{ pagination.totalPages }} </span>
+    <button [disabled]="!pagination.hasNextPage" (click)="goToNextPage()">❯</button>
+  </div>
+</div>
