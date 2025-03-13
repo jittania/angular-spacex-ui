@@ -10,5 +10,5 @@ import { LaunchesComponent } from './launches/launches.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'spacex-launch-ts';
+  title = 'angular-spacex-ui';
 }

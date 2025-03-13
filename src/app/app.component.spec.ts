@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'spacex-launch-ts' title`, () => {
+  it(`should have the 'angular-spacex-ui' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('spacex-launch-ts');
+    expect(app.title).toEqual('angular-spacex-ui');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, spacex-launch-ts');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-spacex-ui');
   });
 });

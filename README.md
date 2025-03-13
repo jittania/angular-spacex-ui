@@ -1,4 +1,4 @@
-## **Background**
+# **SpaceX Launch Viewing App**
 
 This project is an Angular-based web application designed to display SpaceX launch data in a structured, interactive format. Using the SpaceX API, the application presents a sortable, paginated grid of past and upcoming launches. Users can explore key launch details, including flight number, launch year, rocket name, and additional information provided in the API. Clicking on a launch row reveals links to associated media, such as webcast replays and YouTube videos.
 
@@ -76,7 +76,7 @@ $ npm install -g @angular/cli
 $ ng version # should print v19.0.5 as of December 2024
 ```
 
-1. `cd` into `spacex-launch-ts`
+1. `cd` into `angular-spacex-ui`
 
 2. Install dependencies with `npm install`
 
