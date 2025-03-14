@@ -73,7 +73,7 @@ $ npm -v # should print v10.9.0
 
 ```bash
 $ npm install -g @angular/cli
-$ ng version # should print v19.0.5 as of December 2024
+$ ng version # should print >= v19.0.5
 ```
 
 1. `cd` into `angular-spacex-ui`
