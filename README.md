@@ -65,8 +65,8 @@ Links scheme here: https://github.com/r-spacex/SpaceX-API/blob/9f56af14a75ae410c
 
 ```bash
 $ nvm install 22
-$ node -v # should print v22.12.0
-$ npm -v # should print v10.9.0
+$ node -v # should print >= v22.12.0
+$ npm -v # should print >= v10.9.0
 ```
 
 2. Install Angular CLI
@@ -76,12 +76,12 @@ $ npm install -g @angular/cli
 $ ng version # should print >= v19.0.5
 ```
 
-1. `cd` into `angular-spacex-ui`
+3. `cd` into `angular-spacex-ui`
 
-2. Install dependencies with `npm install`
+4. Install dependencies with `npm install`
 
-3. Start the Angular development server with `ng serve` (the first time you run this, you may be prompted for your preferences re: enabling autocompletion and sharing usgae data)
+5. Start the Angular development server with `ng serve` (the first time you run this, you may be prompted for your preferences re: enabling autocompletion and sharing usgae data)
 
-4. Navigate to http://localhost:4200
+6. Navigate to http://localhost:4200
 
-5. Run linter with `ng lint`
+7. Run linter with `ng lint`
